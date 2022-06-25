@@ -1,0 +1,19 @@
+{
+"manifest_version": 2,
+"name": "MySRC",
+"version": "1.0",
+"description": "Manage Default SRC Settings.",
+"background": {    "scripts": ["js/background.js"]},
+"type": "module",
+"options_page": "html/settings.html",
+"content_scripts": [
+    {
+        "matches": ["https://www.speedrun.com/*"],
+        "js": ["js/content.js", "js/storage.js"]
+    }
+],
+"permissions": [
+    "storage"
+],
+"browser_action" : {    "default_title": "MySRC", "default_icon" : "images/icon.png"},"icons": {    "16": "images/icon.png",    "32": "images/icon.png",    "48": "images/icon.png",    "128":"images/icon.png"   }
+}
